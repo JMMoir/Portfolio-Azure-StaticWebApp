@@ -1,0 +1,110 @@
+<nav class="flex items-center justify-between flex-wrap bg-white p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <img class="px-3" src="/assets/toolbox.png" width="50" height="50" alt="githubLogo">
+      <span class="font-semibold text-xl tracking-tight text-black">JM</span>
+    </div>
+
+  <!-- Mobile menu -->
+
+  <div class=" flex items-center w-auto inline-block lg:hidden">
+    <div>
+      <a href="https://www.linkedin.com/in/johnmmoir/" class="inline-block text-sm px-4 py-2 leading-none">
+        <img src="/assets/linkedin-logo.png" width="32" height="32" alt="linkedinLogo">
+      </a>
+        <a href="https://github.com/JMMoir" class="inline-block text-sm px-4 py-2 leading-none">
+        <img src="/assets/github-mark.png" width="32" height="32" alt="githubLogo">
+      </a>
+    </div>
+  </div>
+
+
+    <div class="block lg:hidden">
+      <button (click)='toggleMobileMenu()' class="flex items-center px-3 py-2 border rounded text-black border-black hover:text-green-500">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+      <div id="mobileMenu" [hidden] = "showMobileMenu">
+        <menu>
+          <li>        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
+            About me
+          </a></li>
+          <li>        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
+            Projects
+          </a></li>
+          <li>        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
+            Resume
+          </a></li>
+          <li>        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
+            Blog
+          </a></li>
+        </menu>
+      </div>
+
+    </div>
+
+
+
+    <div class="-mr-2 -my-2 md:hidden">
+      <button type="button" (click)="toggleMobileMenu()"
+        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div [@openClose]="openCloseTrigger"
+      class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+      <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+  
+        <div class="flex items-center justify-between">
+          <button (click)="toggleMobileMenu()" type="button"
+            class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="py-6 px-5">
+          <div class="grid gap-4">
+            <a routerLink="/" class="text-base font-medium text-gray-900 hover:text-gray-700">
+              Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+<!-- Desktop menu -->
+
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto max-sm:hidden">
+  
+      <div class="text-sm lg:flex-grow flex items-center justify-center h-16 font-semibold text-xl">
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
+          About me
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
+          Projects
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
+          Resume
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
+          Blog
+        </a>
+      </div>
+      <div>
+      
+      <a href="https://www.linkedin.com/in/johnmmoir/" class="inline-block text-sm px-4 py-2 leading-none">
+        <img src="/assets/linkedin-logo.png" width="32" height="32" alt="linkedinLogo">
+      </a>
+      </div>
+      <div>
+        <a href="https://github.com/JMMoir" class="inline-block text-sm px-4 py-2 leading-none">
+        <img src="/assets/github-mark.png" width="32" height="32" alt="githubLogo">
+      </a>
+      </div>
+    </div>
+  </nav>
