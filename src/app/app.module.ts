@@ -11,6 +11,6 @@ import { AboutMeComponent } from "./app.component.aboutMe";
 @NgModule({
   declarations: [AppComponent, HeaderComponent, HeroBannerComponent, FooterComponent, AboutMeComponent],
   imports: [BrowserModule, AppRoutingModule],
-  bootstrap: [AppComponent, HeaderComponent, HeroBannerComponent, FooterComponent, AboutMeComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
