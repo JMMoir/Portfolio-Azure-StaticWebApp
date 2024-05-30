@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   hideMobileMenu = true;
   @ViewChild('menuButton') toggleButton: ElementRef;
   @ViewChild('mobileMenu') menu: ElementRef;
+  @ViewChild('menuIcon') icon: ElementRef;
 
   constructor(private router: Router, private renderer: Renderer2) {
     this.renderer.listen('window', 'click',(e:Event)=>{
@@ -20,11 +21,14 @@ export class HeaderComponent implements OnInit {
        * And the menu itself is checked here, and it's where we check just outside of
        * the menu and button the condition abbove must close the menu
        */
-     if(e.target !== this.toggleButton.nativeElement && e.target!==this.menu.nativeElement){
+     if(e.target !== this.toggleButton.nativeElement 
+        && e.target !== this.menu.nativeElement
+        && e.target !== this.icon.nativeElement){
          this.hideMobileMenu = true;
      }
- });
+    });
    }
+
   ngOnInit(): void {
   }
   toggleMobileMenu(){
