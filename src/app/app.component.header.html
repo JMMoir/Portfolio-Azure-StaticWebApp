@@ -24,7 +24,7 @@
 
     <div class="block lg:hidden">
       <button #menuButton (click)='toggleMobileMenu()' class="flex items-center px-3 py-2 border rounded text-black border-black hover:text-green-500">
-        <div  [hidden] = "!hideMobileMenu">
+        <div #menuDiv [hidden] = "!hideMobileMenu">
             <svg
             #menuIcon
             class="fill-current h-3 w-3"

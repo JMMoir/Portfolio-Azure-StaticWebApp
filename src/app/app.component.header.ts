@@ -11,19 +11,15 @@ export class HeaderComponent implements OnInit {
   @ViewChild('menuButton') toggleButton: ElementRef;
   @ViewChild('mobileMenu') menu: ElementRef;
   @ViewChild('menuIcon') icon: ElementRef;
+  @ViewChild('menuDiv') menuDiv: ElementRef;
 
   constructor(private router: Router, private renderer: Renderer2) {
     this.renderer.listen('window', 'click',(e:Event)=>{
-      /**
-       * Only run when toggleButton is not clicked
-       * If we don't check this, all clicks (even on the toggle button) gets into this
-       * section which in the result we might never see the menu open!
-       * And the menu itself is checked here, and it's where we check just outside of
-       * the menu and button the condition abbove must close the menu
-       */
+
      if(e.target !== this.toggleButton.nativeElement 
         && e.target !== this.menu.nativeElement
-        && e.target !== this.icon.nativeElement){
+        && e.target !== this.icon.nativeElement
+        && e.target !== this.menuDiv.nativeElement){
          this.hideMobileMenu = true;
      }
     });
