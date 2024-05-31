@@ -7,9 +7,17 @@ import { HeaderComponent } from "./app.component.header";
 import { HeroBannerComponent } from "./app.component.heroBanner";
 import { FooterComponent } from "./app.component.footer";
 import { AboutMeComponent } from "./app.component.aboutMe";
+import { ProjectsComponent } from "./app.component.projects";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HeroBannerComponent, FooterComponent, AboutMeComponent],
+  declarations: 
+  [ AppComponent,
+    HeaderComponent,
+    HeroBannerComponent,
+    FooterComponent,
+    AboutMeComponent,
+    ProjectsComponent
+  ],
   imports: [BrowserModule, AppRoutingModule],
   bootstrap: [AppComponent]
 })
