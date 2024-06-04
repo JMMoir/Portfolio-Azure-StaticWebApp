@@ -50,9 +50,9 @@
           <li>
             <a (click) = 'toggleMobileMenu()' routerLink = "/aboutMe" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">About me</a>
           </li>
-          <li>        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
-            Projects
-          </a></li>
+          <li>        
+            <a (click) = 'toggleMobileMenu()' routerLink = "/projects" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">Projects</a>
+          </li>
           <li>        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
             Resume
           </a></li>
@@ -72,7 +72,7 @@
         <a routerLink = "/aboutMe" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
           About me
         </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
+        <a routerLink = "/projects" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
           Projects
         </a>
         <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-green-500 mr-4">
