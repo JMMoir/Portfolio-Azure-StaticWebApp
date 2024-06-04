@@ -5,4 +5,7 @@ import { Component } from "@angular/core";
     templateUrl: 'app.component.projects.html'
 })
 export class ProjectsComponent{
+    toggleSlideOver() {
+        console.log('mouse over working')
+    }
 }
